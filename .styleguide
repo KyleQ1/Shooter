@@ -1,0 +1,28 @@
+cppHeaderFileInclude {
+  \.h$
+  \.hpp$
+  \.inl$
+  \.inc$
+}
+
+cppSrcFileInclude {
+  \.cpp$
+}
+
+modifiableFileExclude {
+  gradle/
+  python/
+  format.py
+}
+
+includeOtherLibs {
+  ctre/
+  frc/
+  gtest/
+  hal/
+  wpi/
+}
+
+generatedFileExclude {
+  thirdparty/
+}
