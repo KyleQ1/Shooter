@@ -19,6 +19,7 @@
 #include "subsystems/Elevator.hpp"
 #include "subsystems/FourBarLift.hpp"
 #include "subsystems/Intake.hpp"
+#include "subsystems/Shooter.hpp"
 
 namespace frc3512 {
 
@@ -45,6 +46,7 @@ private:
     Logger m_logger;
     Intake m_intake;
     FourBarLift m_fourBarLift;
+    Shooter m_shooter;
 
     frc::Joystick m_driveStick1{kDriveStick1Port};
     frc::Joystick m_driveStick2{kDriveStick2Port};

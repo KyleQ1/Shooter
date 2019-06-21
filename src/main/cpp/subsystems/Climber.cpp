@@ -222,6 +222,9 @@ void Climber::ProcessMessage(const CommandPacket& message) {
     if (message.topic == "Climber/Up") {
         SetGoal(0);
     }
+    if (message.topic == "Climber/Down") {
+        SetGoal(180);
+    }
 }
 
 void Climber::ProcessMessage(const HIDPacket& message) {
