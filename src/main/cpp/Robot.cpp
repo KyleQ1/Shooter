@@ -24,6 +24,7 @@ Robot::Robot() : PublishNode("Robot") {
     m_climber.Subscribe(m_climber);
     m_climber.Subscribe(m_elevator);
     m_climber.Subscribe(m_fourBarLift);
+    m_climber.Subscribe(m_shooter);
     m_drivetrain.Subscribe(*this);
     m_elevator.Subscribe(*this);
     m_elevator.Subscribe(m_climber);

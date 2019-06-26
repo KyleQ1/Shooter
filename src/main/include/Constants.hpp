@@ -81,7 +81,7 @@ constexpr int kLiftEncoderB = 9;
 
 /*
  * Shooter
- */ 
+ */
 
 // Motor Port
 constexpr int kShooterPort = 7;

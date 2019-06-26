@@ -2,7 +2,8 @@
 
 #pragma once
 
-#include "frc/Notifier.h"
+#include <frc/Notifier.h>
+#include <frc/Spark.h>
 
 #include "Constants.hpp"
 #include "communications/PublishNode.hpp"
@@ -11,7 +12,7 @@
 namespace frc3512 {
 
 class Shooter : public SubsystemBase, public PublishNode {
-public: 
+public:
     Shooter();
 
     void Shoot();
@@ -26,9 +27,9 @@ public:
     void ProcessMessage(const CommandPacket& message) override;
 
 private:
-    frc::Notifier m_thread{&Shooter::Iterate, this};
-
     frc::Spark m_grbx{kShooterPort};
+
+    frc::Notifier m_thread{&Shooter::Iterate, this};
 };
 
-} // namespace frc3512
+}  // namespace frc3512
