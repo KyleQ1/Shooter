@@ -19,13 +19,13 @@ void Shooter::Shoot() { m_grbx.Set(1.0); }
 void Shooter::ProcessMessage(const ButtonPacket& message) {
     if (message.topic == "Robot/AppendageStick2" && message.button == 3 &&
         message.pressed) {
-        CommandPacket message{"Climber/Down", true};
+        CommandPacket message{"ClimberDown", true};
         Publish(message);
     }
 }
 
 void Shooter::ProcessMessage(const CommandPacket& message) {
-    if (message.topic == "Shooter/Shoot") {
+    if (message.topic == "Elevator/Shoot") {
         Shoot();
     }
 }

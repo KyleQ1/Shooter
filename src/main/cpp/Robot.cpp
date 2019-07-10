@@ -33,6 +33,7 @@ Robot::Robot() : PublishNode("Robot") {
     m_fourBarLift.Subscribe(*this);
     m_fourBarLift.Subscribe(m_elevator);
     m_fourBarLift.Subscribe(m_climber);
+    m_shooter.Subscribe(*this);
     m_shooter.Subscribe(m_elevator);
 
     camera.SetResolution(160, 120);

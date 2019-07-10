@@ -222,7 +222,7 @@ void Climber::ProcessMessage(const CommandPacket& message) {
     if (message.topic == "Climber/Up") {
         SetGoal(0);
     }
-    if (message.topic == "Climber/Down") {
+    if (message.topic == "Shooter/ClimberDown") {
         SetGoal(180);
     }
 }

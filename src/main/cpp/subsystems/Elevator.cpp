@@ -96,7 +96,7 @@ void Elevator::ProcessMessage(const ButtonPacket& message) {
     if (message.topic == "Robot/AppendageStick" && message.button == 7 &&
         message.pressed) {
         SetGoal(kTopHatch);
-        CommandPacket message("Shooter/Shoot", true);
+        CommandPacket message("Shoot", true);
         Publish(message);
     }
     if (message.topic == "Robot/AppendageStick" && message.button == 8 &&
